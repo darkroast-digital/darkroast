@@ -1,0 +1,290 @@
+.main-menu ul {
+  padding-left: 0;
+}
+.main-menu ul.menu {
+  list-style: none;
+}
+.main-menu ul.menu li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  z-index: 1;
+}
+.main-menu ul.menu li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #555;
+  transition: all .3s;
+}
+.main-menu ul.menu li a:hover {
+  text-decoration: none;
+  color: #2f1c0f;
+}
+.main-menu ul.menu li a:after,
+.main-menu ul.menu li a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background: #2f1c0f;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+.main-menu ul.menu li a:after {
+  top: -10px;
+}
+.main-menu ul.menu li a:before {
+  bottom: -10px;
+}
+.main-menu ul.menu li.active a:after,
+.main-menu ul.menu li a:hover:after,
+.main-menu ul.menu li.active a:before,
+.main-menu ul.menu li a:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+.main-menu ul.menu li.active a:after,
+.main-menu ul.menu li a:hover:after {
+  top: 0;
+}
+.main-menu ul.menu li.active a:before,
+.main-menu ul.menu li a:hover:before {
+  bottom: 0;
+}
+.main-menu ul.menu li.has-submenu {
+  position: relative;
+}
+.main-menu ul.menu li.has-submenu .sub-toggle {
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 15px;
+}
+.main-menu ul.menu li .submenu {
+  width: 250px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: -1;
+  transform: scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+.main-menu ul.menu li .submenu li {
+  float: none;
+  display: block;
+}
+.main-menu ul.menu li .submenu li a {
+  text-align: left;
+}
+.main-menu ul.menu li .submenu.is-showing {
+  top: 40px;
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  z-index: 9;
+}
+.main-menu ul.menu:after,
+.main-menu ul.menu:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main-menu.effect-1 ul li a:after,
+.main-menu.effect-1 ul li a:before {
+  position: static;
+  content: "";
+}
+.main-menu.effect-1 ul li a:hover {
+  font-weight: bold;
+}
+.main-menu.is-mobile {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  left: -280px;
+  z-index: 9;
+  background: transparent;
+  transition: left .4s;
+  background: #333;
+}
+.main-menu.is-mobile .menu-collapser {
+  width: auto;
+  left: 280px;
+  top: 50px;
+  z-index: 9;
+}
+.main-menu.is-mobile ul.menu {
+  position: relative;
+  display: block !important;
+  z-index: 9;
+  transform: translateX(-280px);
+  transition: transform .4s 0s;
+}
+.main-menu.is-mobile ul.menu.collapsed {
+  max-width: 280px;
+}
+.main-menu.is-mobile ul.menu.collapsed li {
+  float: none;
+  width: 100%;
+}
+.main-menu.is-mobile ul.menu.collapsed li a {
+  text-align: left;
+}
+.main-menu.is-mobile ul.menu.collapsed li .submenu {
+  position: inherit;
+  top: auto;
+  left: auto;
+  display: none !important;
+}
+.main-menu.is-mobile ul.menu.collapsed li .submenu.is-showing {
+  display: block !important;
+}
+.main-menu.is-mobile ul.menu.collapsed li.has-submenu .sub-toggle {
+  display: block;
+}
+.main-menu.is-mobile ul.menu.collapsed li.has-submenu .submenu {
+  margin-left: 15px;
+}
+.main-menu.is-mobile.menu_actived {
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  left: 0;
+}
+.main-menu.is-mobile.menu_actived::-webkit-scrollbar {
+  display: none;
+}
+.main-menu.is-mobile.menu_actived .menu {
+  transform: translateX(0) !important;
+  transition: transform .4s .3s;
+  top: 0;
+}
+.main-menu.is-mobile.menu_actived .menu li a {
+  color: #cccccc;
+}
+.main-menu.is-mobile.menu_actived .menu li.has-submenu .sub-toggle {
+  color: #cccccc;
+}
+.main-menu.is-mobile.menu_actived .menu li:hover {
+  background-color: rgba(0, 0, 0, 0.33);
+}
+.main-menu.is-mobile.menu_actived .menu li:hover > .sub-toggle,
+.main-menu.is-mobile.menu_actived .menu li:hover > a {
+  color: #2f1c0f;
+  cursor: pointer;
+}
+.main-menu.is-mobile.menu_actived .menu-collapser {
+  top: 0;
+}
+.main-menu.is-mobile.menu_actived .menu-collapser .collapse-button {
+  left: -45px;
+}
+.main-menu.menu-mega ul li {
+  position: static !important;
+}
+.main-menu.menu-mega ul li .submenu {
+  top: 120px !important;
+  background: #FFF;
+  padding: 30px !important;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 0 3px#E5E5E5;
+}
+.main-menu.menu-mega ul li .submenu.mega-menu-50 {
+  width: 50% !important;
+}
+.main-menu.menu-mega ul li .submenu.mega-menu-100 {
+  width: 100% !important;
+}
+.main-menu.menu-mega ul li .submenu ul,
+.main-menu.menu-mega ul li .submenu li {
+  display: block !important;
+}
+.main-menu.menu-mega ul li .submenu li.mega-col {
+  float: left !important;
+}
+.main-menu.menu-mega ul li .submenu li a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 0 !important;
+}
+.main-menu.menu-mega ul li:hover .submenu {
+  top: 85px !important;
+}
+.main-menu.menu-mega.is-mobile ul li {
+  position: relative !important;
+}
+.main-menu.menu-mega.is-mobile ul li .submenu {
+  position: static !important;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+.main-menu.menu-mega.is-mobile ul li .submenu li.mega-col {
+  margin-bottom: 15px !important;
+  width: 100% !important;
+  background: transparent !important;
+}
+.main-menu.menu-mega.is-mobile ul li .submenu li .sub-toggle {
+  display: none !important;
+}
+.main-menu.menu-mega.is-mobile ul li .submenu li .submenu-item li {
+  background: transparent;
+}
+.main-menu.menu-style-2 .menu-collapser {
+  top: 70px;
+}
+.main-menu.menu-style-2 .menu-collapser .collapse-button .icon-bar {
+  background-color: black ;
+  height: 1px;
+  margin-top: 10px;
+}
+.main-menu.menu-style-2 .menu-collapser .collapse-button .icon-bar:nth-child(2) {
+  margin-left: 10px;
+}
+.main-menu.menu-style-2.menu_actived .icon-bar {
+  background-color: #ccc !important;
+}
+.main-menu.menu-style-3 {
+  transition: right .4s !important;
+}
+.main-menu.menu-style-3.is-mobile {
+  left: auto;
+  right: -280px;
+}
+.main-menu.menu-style-3.is-mobile .menu-collapser {
+  left: auto;
+  right: 280px;
+}
+.main-menu.menu-style-3.is-mobile .menu-collapser .collapse-button {
+  transition: right .4s !important;
+  left: auto;
+  right: 15px;
+}
+.main-menu.menu-style-3.is-mobile .menu-collapser .collapse-button .icon-bar:nth-child(2) {
+  margin-left: 10px;
+}
+.main-menu.menu-style-3.is-mobile ul.menu {
+  transform: translateX(280px);
+}
+.main-menu.menu-style-3.is-mobile.menu_actived {
+  left: auto;
+  right: 0;
+}
+.main-menu.menu-style-3.is-mobile.menu_actived .collapse-button {
+  right: -45px;
+  top: -15px;
+}
+.main-menu.menu-style-3 ul.menu li a {
+  text-align: right !important;
+}
+.main-menu.menu-style-3 ul.menu li .sub-toggle {
+  right: auto !important;
+  left: 15px !important;
+}
