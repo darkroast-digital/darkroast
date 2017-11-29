@@ -8668,3 +8668,71 @@ footer.section {
 .slider-item.client-item:hover img:nth-of-type(2)  {
   opacity: 1;
 }
+
+.expressCall {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  padding: 4rem;
+  color: #FFFFFF;
+  background: #313131;
+}
+
+.expressCall h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.expressCall p {
+  width: 80%;
+  font-size: 2rem;
+}
+
+.expressCall a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.expressCall a:hover {
+  color: rgba(255, 255, 255, .75);
+}
+
+.expressCall .column-8 {
+    max-width: 65%;
+    width: 100%;
+  }
+
+.expressCall .column-4 {
+    max-width: 35%;
+    width: 100%;
+  }
+
+.expressCall img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+@media (max-width: 767px) {
+  .expressCall {
+    display: block;
+    text-align: center;
+  }
+
+  .expressCall .column-8 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .expressCall .column-4 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .expressCall p {
+    width: 100%;
+  }
+}
