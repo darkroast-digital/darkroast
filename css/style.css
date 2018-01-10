@@ -8678,6 +8678,7 @@ footer.section {
   padding: 4rem;
   color: #FFFFFF;
   background: #313131;
+  margin-bottom:3rem;
 }
 
 .expressCall h1 {
@@ -8714,6 +8715,15 @@ footer.section {
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+
+  .logoGiveawayCall {
+    margin-bottom:3rem;
+    padding:0;
+  }
+
+  .logoGiveawayCall img {
+    max-width:100%;
   }
 
 @media (max-width: 767px) {
